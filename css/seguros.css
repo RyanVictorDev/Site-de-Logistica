@@ -1,0 +1,57 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.seguros_banner{
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60%;
+    
+}
+
+.opicoes_seguros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo{
+    margin-top: 20px;
+    text-align: center;
+    color: #000000;
+    font-size: 35px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    
+}
+
+.planos{
+    margin-top: 20px;
+    text-align: center;
+    color: #366AB9;
+    font-size: 35px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.pacote{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    
+}
+
+.carrinho{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    
+}

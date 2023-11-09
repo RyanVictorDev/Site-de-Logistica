@@ -1,0 +1,45 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.index_banner{
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60%;
+    
+}
+
+.veja-servicos{
+    margin-top: -32px;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: #366AB9;
+    font-size: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.op-servicos{
+    background-color: gainsboro;
+    box-shadow: 10px 10px 10px gray;
+    width: 200px;
+    height: 342px;
+}
+
+.imagem-servicos{
+    width: 200px;
+    height: 342px;
+}

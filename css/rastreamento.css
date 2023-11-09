@@ -1,0 +1,46 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.rastreamento_banner{
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60%;
+    
+}
+
+.rastreamento{
+    background-color: rgb(124, 150, 141);
+    border: solid rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.codigo_text{
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.inp_cod{
+    display: flex;
+    border-radius: 20px;
+    width: 80%;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.localizado{
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+}

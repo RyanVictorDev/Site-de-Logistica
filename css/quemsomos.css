@@ -1,0 +1,11 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.quemsomos_banner{
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60%;
+    
+}

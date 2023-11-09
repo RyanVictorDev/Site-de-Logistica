@@ -1,0 +1,45 @@
+footer{
+    background-color: #ABB4AD;
+    /* margin-top: 25% */
+}
+
+a footer{
+    width: 100%;
+}
+
+.logo-img-footer{
+    display: flex;
+    width: 32px;
+    height: auto;
+    margin-right: 0;
+}
+
+.nome-empresa-footer{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0%;
+}
+
+.logofoot{
+    display: flex;
+    justify-content: center;
+}
+
+.cop{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cnpj{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
