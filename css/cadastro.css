@@ -1,7 +1,6 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
 body{
     background-image: radial-gradient(circle, #65da91, #184618);
 }
@@ -35,7 +34,7 @@ body{
 
 .welcome{
     text-align: center;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     color: #ffffff;
 }
 
@@ -82,7 +81,6 @@ input:hover::placeholder{
 }
 
 
-
 .login-check {
     font-family: 'Poppin', sans-serif;
     width: 60%;
@@ -101,7 +99,6 @@ input:hover::placeholder{
     background: #00d170;
     background: linear-gradient(to top, #01c067, #06CF71);
 }
-  
 
 @media screen and (max-width: 600px) {
     .login-box{
@@ -109,17 +106,4 @@ input:hover::placeholder{
     }
     
 
-}
-
-.login-links{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 15px;
-}
-
-.login-links a{
-    font-size: 14px;
-    font-weight: 500;
-    color: rgb(52, 38, 85);
 }

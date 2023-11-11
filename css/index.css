@@ -2,6 +2,7 @@
 
 .index_banner{
     display: flex;
+    border-radius: 20px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -25,7 +26,7 @@
 .wrap{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 10px;
     margin-bottom: 30px;
     margin-left: 20%;
@@ -33,13 +34,21 @@
 }
 
 .op-servicos{
-    background-color: gainsboro;
+    border-radius: 5px 20px;
+    background-color: rgb(45, 255, 157);
+    border-radius: 100%;
     box-shadow: 10px 10px 10px gray;
-    width: 200px;
-    height: 342px;
 }
 
 .imagem-servicos{
-    width: 200px;
-    height: 342px;
+    /* border-radius: 5px 20px;
+    width: 150px;
+    height: 252px; */
+}
+
+@media screen and (max-width: 600px) {
+    .wrap{
+        flex-direction: column;
+    }
+
 }
