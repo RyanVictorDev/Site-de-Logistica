@@ -40,20 +40,26 @@
         </div></a>
     </div>
 
-    <img class="rastreamento_banner" src="../img/rastreamento-banner.png" alt="">
+    <!-- <p class="titulo-pag">Rastreamento de encomendas</p> -->
     
-    <div class="rastreamento">
-        <form action="">
-            
-            <label class="codigo_text" for="code">Adicione o Código do produto:</label>
-            <input class="inp_cod" type="text" id="code"><br>
-            
+    <div class="raster-box">
+        <h2 class="titulo">Quer encontrar seu pedido?</h2>
+        <br>
+        <form>
+            <div>
+                <label class="label-cod" for="codigo">Código</label>
+                <input type="text" id="codigo" name="codigo" placeholder="Adicione o código do seu produto:" required>
+            </div>
+
+            <button class="rastrear-pedido">
+                <p>Rastrear pedido</p>
+            </button>
         </form>
+    </div>
 
-        <p class="localizado">O seu produto está cituado em:</p>
+<!--<label class="label-local" for="localizacao">Localização</label>
+    <textarea name="localizacao" id="localizacao" placeholder="Seu produto está em:"></textarea> -->
 
-        
-    </div>    
 
     <a href="../index.html"><footer>
         <div class="logofoot">

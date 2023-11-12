@@ -1,55 +1,64 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
 .index_banner{
-    animation: showItens 2s ease 0s normal none;
-    display: flex;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 60%;
+  animation: showItens 2s ease 0s normal none;
+  display: flex;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 60%;
     
 }
 
 .veja-servicos{
-    animation: vibrate 5s ease 0s infinite normal none;
-    margin-top: -32px;
-    text-align: center;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    color: #366AB9;
-    font-size: 50px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
+  animation: vibrate 5s ease 0s infinite normal none;
+  margin-top: 20px;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: #366AB9;
+  font-size: 50px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
 
 .wrap{
-    animation: customAni 2s ease 0s normal none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    margin-left: 20%;
-    margin-right: 20%;
+  animation: showItens 2s ease 0s normal none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.servicos-desc{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .op-servicos{
-    width: 150px;
-    height: 150px;
-    background-color: rgb(45, 255, 157);
-    border-radius: 50%;
+  margin-inline: auto;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(45, 255, 157);
+  border-radius: 50%;
+  box-shadow: 3px 3px 17px 0px rgba(15, 128, 71, 1);
 }
 
 .imagem-servicos{
-    display: flex;
-    margin-top: 13%;
-    margin-bottom: auto;
-    margin-inline: auto;
-    width: 100px;
-    height: auto; 
+  display: flex;
+  margin-top: 13%;
+  margin-bottom: auto;
+  margin-inline: auto;
+  width: 100px;
+  height: auto; 
 }
 
 @media screen and (max-width: 600px) {
