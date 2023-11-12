@@ -128,3 +128,45 @@ header a{
     width: auto;
     margin-right: 0;
 }
+
+@media screen and (max-width: 600px) {
+
+    .logo-img{
+        width: 50px;
+        height: auto;
+    }
+
+    .login{
+        width: 30px;
+        height: auto;
+    }
+
+    .cadeado{
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 25px;
+    }
+
+    .aviao{
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 25px;
+    }
+
+    .lupa{
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 25px;
+    }
+
+    .pessoa{
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 21px;
+    }
+
+    .link{
+        font-size: 15px
+    }
+
+}

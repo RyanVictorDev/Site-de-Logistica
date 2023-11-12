@@ -1,6 +1,7 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
 .index_banner{
+    animation: showItens 2s ease 0s normal none;
     display: flex;
     border-radius: 20px;
     margin-top: 10px;
@@ -12,6 +13,7 @@
 }
 
 .veja-servicos{
+    animation: vibrate 5s ease 0s infinite normal none;
     margin-top: -32px;
     text-align: center;
     width: fit-content;
@@ -24,6 +26,7 @@
 }
 
 .wrap{
+    animation: customAni 2s ease 0s normal none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -34,21 +37,72 @@
 }
 
 .op-servicos{
-    border-radius: 5px 20px;
+    width: 150px;
+    height: 150px;
     background-color: rgb(45, 255, 157);
-    border-radius: 100%;
-    box-shadow: 10px 10px 10px gray;
+    border-radius: 50%;
 }
 
 .imagem-servicos{
-    /* border-radius: 5px 20px;
-    width: 150px;
-    height: 252px; */
+    display: flex;
+    margin-top: 13%;
+    margin-bottom: auto;
+    margin-inline: auto;
+    width: 100px;
+    height: auto; 
 }
 
 @media screen and (max-width: 600px) {
     .wrap{
-        flex-direction: column;
+      display: flex;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: fit-content;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .op-servicos{
+      margin-bottom: 20px;
     }
 
 }
+
+@keyframes vibrate {
+    0% {
+      transform: translate(0);
+    }
+  
+    20% {
+      transform: translate(-2px, 2px);
+    }
+  
+    40% {
+      transform: translate(-2px, -2px);
+    }
+  
+    60% {
+      transform: translate(2px, 2px);
+    }
+  
+    80% {
+      transform: translate(2px, -2px);
+    }
+  
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes showItens {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 50% 0%;
+    }
+  
+    100% {
+      transform: scale(1);
+      transform-origin: 50% 0%;
+    }
+  }
+  
