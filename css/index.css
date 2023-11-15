@@ -20,7 +20,7 @@
   margin-left: auto;
   margin-right: auto;
   color: #366AB9;
-  font-size: 50px;
+  font-size: 200%;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
 }
@@ -61,6 +61,42 @@
   height: auto; 
 }
 
+.sessoes-servicos{
+  display: flex;
+}
+
+.lado-esquerdo{
+  animation: showItens 2s ease 0s normal none;
+  display: flex;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 50%;
+  height: auto;
+
+}
+
+.lado-direito{
+  animation: showItens 3s ease 0s normal none;
+  display: flex;
+  text-align: center;
+  margin-right: 5%;
+  max-width: 50%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text-sessoes{
+  font-size: x-large;
+}
+
+.img-sessoes{
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 600px) {
     .wrap{
       display: flex;
@@ -74,6 +110,24 @@
     .op-servicos{
       margin-bottom: 20px;
     }
+
+    .sessoes-servicos{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lado-direito{
+      margin-inline: auto;
+    }
+
+    .lado-esquerdo{
+      margin-inline: auto;
+    }
+
+    .img-1{order: 1;}
+    .text-1{order: 2;}
+    .img-2{order: 3; margin-top: 5%;}
+    .text-2{order: 4;}
 
 }
 
