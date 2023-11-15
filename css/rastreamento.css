@@ -11,6 +11,7 @@
 
 form{
     display: flex;
+    flex-direction: column;
 }
 
 .raster-box{
@@ -23,10 +24,9 @@ form{
     border-radius: 10px;
     background-color: rgba(0, 124, 56, 0);
     backdrop-filter: blur(5px);
-    /* box-shadow: 0 0 10px black; */
+    box-shadow: 0 0 10px black;
     z-index: -5;
     text-align: center;
-    text-shadow: 2px 2px 2px rgba(164, 164, 164, 1);
 }
 
 .titulo{
@@ -66,7 +66,7 @@ input[type="text"]{
     font-family: "Poppins", sans-serif;
 }
 
-.label-cod {
+.label-cod, .label-nome {
     display: flex;
     transform: translateY(40px);
     padding-left: 30px;
@@ -80,10 +80,9 @@ input[type="text"]{
     padding-top: 25px;
 }
 
-.label-cod:hover, .label-cod:focus{
+.label-cod:hover, .label-cod:focus, .label-nome:hover, .label-nome:focus{
     transform: translateY(-2px);
     transition: 1s;
-
 }
 
 input::placeholder{
@@ -113,6 +112,7 @@ textarea:hover::placeholder{
     padding: 10px 25px;
     margin-top: auto;
     margin-bottom: auto;
+    margin-inline: auto;
     border-radius: 50px;
     border: 2px solid #000000;
     background: #ffffff;

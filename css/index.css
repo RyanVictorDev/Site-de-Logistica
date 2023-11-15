@@ -61,8 +61,17 @@
   height: auto; 
 }
 
+.traco{
+  background-color: rgba(108, 243, 119, 0.459);
+  height: 5px;
+  width: 80%;
+  margin-inline: auto;
+  margin-top: 3px;
+}
+
 .sessoes-servicos{
   display: flex;
+  margin-top: 5%;
 }
 
 .lado-esquerdo{
@@ -126,8 +135,10 @@
 
     .img-1{order: 1;}
     .text-1{order: 2;}
-    .img-2{order: 3; margin-top: 5%;}
+    .img-2{order: 3;}
     .text-2{order: 4;}
+    .img-3{order: 5;}
+    .text-3{order: 6;}
 
 }
 
