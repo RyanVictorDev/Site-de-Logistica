@@ -98,7 +98,9 @@
 }
 
 .text-sessoes{
+  display: flex;
   font-size: x-large;
+  flex-direction: column;
 }
 
 .img-sessoes{

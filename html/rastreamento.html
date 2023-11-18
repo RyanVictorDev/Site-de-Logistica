@@ -32,7 +32,7 @@
         </div></a>
 
         <a href="../html/rastreamento.html"><div class="itens-menu">
-            <img src="../img/lupa.png" alt="" class="lupa"> <p class="link">Rastreamento</p>
+            <img src="../img/lupa.png" alt="" class="lupa"> <p class="link pag-atual">Rastreamento</p>
         </div></a> 
 
         <a href="../html/quemsomos.html"><div class="itens-menu">
@@ -45,7 +45,7 @@
     <div class="raster-box">
         <h2 class="titulo">Quer encontrar seu pedido?</h2>
         <br>
-        <form>
+        <form action="cad.php" method="get">
             <div>
                 <label class="label-nome" for="nome-produto">Nome</label>
                 <input type="text" id="nome-produto" name="nome-produto" placeholder="Adicione o nome do produto:" required>
@@ -54,9 +54,8 @@
                 <input type="text" id="codigo" name="codigo" placeholder="Adicione o código do produto:" required>
             </div>
 
-            <button class="rastrear-pedido">
-                <p>Rastrear pedido</p>
-            </button>
+            <input class="rastrear-pedido" type="submit" value="Rastrear pedido">
+
         </form>
     </div>
 
