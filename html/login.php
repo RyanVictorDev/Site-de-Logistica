@@ -1,3 +1,36 @@
+<?php
+include_once('../conexao.php');
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+        $usuario = $_POST['username'];
+        $senha = $_POST['password'];
+
+        // Verificar no banco de dados se o usuário e senha são válidos
+        $sql = "SELECT * FROM cadastro WHERE username = ? AND user_password = ?";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param("ss", $usuario, $senha);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows === 1) {
+            // Login bem-sucedido
+            header('location: ../index.php');
+            exit();
+        } else {
+            echo '<script>alert("Usuário ou senha incorretos. Tente novamente.");</script>';
+        }
+
+        $stmt->close();
+    } else {
+        echo "Por favor, preencha todos os campos do formulário.";
+    }
+}
+
+$mysqli->close();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,6 +42,8 @@
     <title>Login</title>
 </head>
 <body>
+
+    
 
     <header>
         <a href="../index.php"><div class="logo">
@@ -47,9 +82,9 @@
     <div class="login-box">
         <h2 class="welcome">Bem Vindo(a) devolta!</h2>
         <br>
-        <form action="" method="post">
+        <form action="login.php" method="post">
             <label for="username">Usuário</label>
-            <input type="text" id="username" name="password" placeholder="Adicione seu usuário" required>
+            <input type="text" id="username" name="username" placeholder="Adicione seu usuário" required>
 
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="Adicione sua senha" required>
