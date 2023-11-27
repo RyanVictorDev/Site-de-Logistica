@@ -1,3 +1,36 @@
+<?php
+// Inclua a conexão ao banco de dados
+include_once('../conexao.php');
+
+// Verifica se o formulário foi enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verifica se as variáveis do formulário estão definidas
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+        // Recupera os dados do formulário
+        $usuario = $_POST['username'];
+        $senha = $_POST['password'];
+
+        // Instrução preparada para evitar SQL injection
+        $sql = $mysqli->prepare("INSERT INTO cadastro (username, user_password) VALUES (?, ?)");
+        $sql->bind_param("ss", $usuario, $senha);
+
+        if ($sql->execute()) {
+            header('location: ../index.php?');
+            exit();
+        } else {
+            echo "Erro ao cadastrar: " . $sql->error;
+        }
+
+        $sql->close();
+    } else {
+        echo "Por favor, preencha todos os campos do formulário.";
+    }
+}
+
+$mysqli->close();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +44,7 @@
 <body>
 
     <header>
-        <a href="../index.html"><div class="logo">
+        <a href="../index.php"><div class="logo">
         <img class="logo-img" src="../img/logo.png" alt=""> 
         </div></a>
 
@@ -20,22 +53,23 @@
             <button class="btn-pesquisa" type="submit">Buscar</button>
         </div>
         
-        <a href="../html/login.html"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra">Login</p></div></a>    </header>
+        <a href="../html/login.php"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra">Login</p></div></a>
+    </header>
 
     <div class="menu">
-        <a href="../html/seguros.html"><div class="itens-menu">
+        <a href="../html/seguros.php"><div class="itens-menu">
             <img src="../img/cadeado.png" alt="" class="cadeado"> <p class="link">Seguros</p>
         </div></a>
 
-        <a href="../html/fretes.html"><div class="itens-menu">
+        <a href="../html/fretes.php"><div class="itens-menu">
             <img src="../img/aviao.png" alt="" class="aviao"> <p class="link">Fretes</p>
         </div></a>
 
-        <a href="../html/rastreamento.html"><div class="itens-menu">
+        <a href="../html/rastreamento.php"><div class="itens-menu">
             <img src="../img/lupa.png" alt="" class="lupa"> <p class="link">Rastreamento</p>
         </div></a> 
 
-        <a href="../html/quemsomos.html"><div class="itens-menu">
+        <a href="../html/quemsomos.php"><div class="itens-menu">
             <img src="../img/pessoa.png" alt="" class="pessoa"> <p class="link">Quem somos</p>
         </div></a>
     </div>
@@ -47,15 +81,15 @@
     <div class="login-box">
         <h2 class="welcome">Boas Vindas!</h2>
         <br>
-        <form action="cad.php" method="get">
+        <form action="cadastro.php" method="post">
             <label for="username">Usuário</label>
-            <input type="text" id="username" name="password" placeholder="Adicione seu nome" required>
+            <input type="text" id="username" name="username" placeholder="Adicione seu nome" required>
 
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="Adicione sua senha" required>
 
-            <label for="password-confirm">Confirmar Senha</label>
-            <input type="password" name="password-confirm" id="password-confirm" placeholder="Confirme sua senha" required>
+            <!-- <label for="password-confirm">Confirmar Senha</label> -->
+            <!-- <input type="password" name="password-confirm" id="password-confirm" placeholder="Confirme sua senha" required> -->
         
             <input class="login-check" type="submit" value="Cadastre-se">
 
@@ -63,7 +97,7 @@
     </div>
 
     
-    <a href="../index.html"><footer>
+    <a href="../index.php"><footer>
         <div class="logofoot">
             <img class="logo-img-footer" src="../img/logo-preta.png" alt="">
             <p class="nome-empresa-footer">Mão na Roda</p>
