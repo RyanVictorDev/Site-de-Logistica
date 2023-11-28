@@ -39,6 +39,7 @@ $mysqli->close();
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <script src="../js/perfil.js"></script>
     <title>Cadastro</title>
 </head>
 <body>
@@ -53,7 +54,7 @@ $mysqli->close();
             <button class="btn-pesquisa" type="submit">Buscar</button>
         </div>
         
-        <a href="../html/login.php"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra">Login</p></div></a>
+        <a href="../html/login.php"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra" id="login_palavra"></p></div></a>
     </header>
 
     <div class="menu">

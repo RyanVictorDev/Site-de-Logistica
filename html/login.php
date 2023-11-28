@@ -55,7 +55,8 @@ $mysqli->close();
             <button class="btn-pesquisa" type="submit">Buscar</button>
         </div>
         
-        <a href="../html/login.php"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra">Login</p></div></a>    </header>
+        <a href="../html/login.php"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra">Login</p></div></a>    
+    </header>
 
     <div class="menu">
         <a href="../html/seguros.php"><div class="itens-menu">
@@ -97,7 +98,7 @@ $mysqli->close();
 
         <div class="login-links">
             <!-- <a href="#">Esqueci a Senha</a> -->
-            <a href="../html/cadastro.html">Cadastre-se</a>
+            <a href="../html/cadastro.php">Cadastre-se</a>
         </div>
     </div>
 
