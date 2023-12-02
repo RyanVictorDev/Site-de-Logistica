@@ -132,7 +132,54 @@ textarea:hover::placeholder{
 }
 
 .produto{
-    box-shadow: 3px 3px 10px 1px rgba(24, 128, 55, 0.36);
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 3px 3px 10px 5px rgba(24, 128, 55, 0.479);
+}
+
+.spamando{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.pronum{
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+
+.excluir-form{
+    margin-top: 10px;
+}
+
+.input-atualizacao{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-acao{
+    font-family: 'Poppin', sans-serif;
+    width: 40%;
+    height: 30px;
+    color: #000000;
+    font-size: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-inline: auto;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    background: #ffffff;
+}
+
+.fakeAlert{
+    margin-top: 10px;
+    color: red;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,16 +1,47 @@
 <?php
-include_once('../conexaoRastreio.php');
+include_once('../conexaoRastreio.php'); 
 
 // Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome_produto = $_POST["nome-produto"];
     $numero_produto = $_POST["codigo"];
 
+    if(isset($_POST["excluir_produto"])) {
+        $id_produto_excluir = $_POST["excluir_produto"];
+
+        // Excluir o produto do banco de dados
+        $sql_delete = "DELETE FROM produtos WHERE id = $id_produto_excluir";
+
+        if ($mysqli->query($sql_delete) === TRUE) {
+            header("Location: rastreamento.php");
+            exit();
+        } else {
+            echo "Erro ao excluir produto: " . $mysqli->error;
+        }
+    }
+
+    // Verificar se o botão de atualização foi pressionado
+    if(isset($_POST["atualizar_produto"])) {
+        $id_produto_atualizar = $_POST["atualizar_produto"];
+        $novo_nome_produto = $_POST["novo_nome_produto"];
+
+        // Atualizar o nome do produto no banco de dados
+        $sql_update = "UPDATE produtos SET nome = '$novo_nome_produto' WHERE id = $id_produto_atualizar";
+
+        if ($mysqli->query($sql_update) === TRUE) {
+            header("Location: rastreamento.php");
+            exit();
+        } else {
+            echo "Erro ao atualizar nome do produto: " . $mysqli->error;
+        }
+    }
+
     // Inserir novo produto no banco de dados
-    $sql = "INSERT INTO produtos (nome_produto, numero_produto) VALUES ('$nome_produto', $numero_produto)";
+    $sql = "INSERT INTO produtos (nome, codigo) VALUES ('$nome_produto', $numero_produto)";
 
     if ($mysqli->query($sql) === TRUE) {
-        echo "Produto adicionado com sucesso.";
+        header("Location: rastreamento.php");
+        exit();
     } else {
         echo "Erro ao adicionar produto: " . $mysqli->error;
     }
@@ -19,8 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Selecionar produtos do banco de dados
 $sql_select = "SELECT * FROM produtos";
 $result = $mysqli->query($sql_select);
-
-<!-- $mysqli->close(); -->
 ?>
 
 <!DOCTYPE html>
@@ -89,8 +118,27 @@ $result = $mysqli->query($sql_select);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='produto'>";
-                    echo "<strong>Produto:</strong> " . $row["nome_produto"] . "<br>";
-                    echo "<strong>Número:</strong> " . $row["numero_produto"];
+                    echo "<div class='pronum'>";
+                    echo "<strong>Produto:</strong> " . $row["nome"] . "<br>";
+                    echo "<p class='spamando'>Número:</p> " . $row["codigo"];
+                    echo "</div>";
+
+                    // Adicionar botão Atualizar
+                    echo "<form action='rastreamento.php' method='post' class='atualizar-form'>";
+                    echo "<input type='hidden' name='atualizar_produto' value='" . $row["id"] . "'>";
+                    echo "<input class='input-atualizacao' type='text' name='novo_nome_produto' placeholder='Novo nome' required>";
+                    echo "<input class='btn-acao' type='submit' value='Atualizar Nome'>";
+                    echo "</form>";
+
+                    // Adicionar botão Excluir
+                    echo "<form action='rastreamento.php' method='post' class='excluir-form'>";
+                    echo "<input type='hidden' name='excluir_produto' value='" . $row["id"] . "'>";
+                    echo "<input class='btn-acao' type='submit' value='Excluir'>";
+                    echo "</form>";
+                    
+
+                    echo "<p class='fakeAlert'>Produto não encontrado :(</p>";
+
                     echo "</div>";
                 }
             } else {
