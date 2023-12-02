@@ -126,6 +126,15 @@ textarea:hover::placeholder{
     background: linear-gradient(to top, #01c067, #06CF71);
 }
 
+.lista-produtos{
+    display: flex;
+    flex-direction: column;
+}
+
+.produto{
+    box-shadow: 3px 3px 10px 1px rgba(24, 128, 55, 0.36);
+}
+
 @media screen and (max-width: 600px) {
     .raster-box{
         max-width: 300px;

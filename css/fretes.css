@@ -1,97 +1,105 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
 .fretes_banner{
-    animation: showItens 2s ease 0s normal none;
-    display: flex;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    height: 60%;
+  animation: showItens 2s ease 0s normal none;
+  display: flex;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  height: 60%;
     
 }
 
 .opicoes_fretes{
-    justify-content: space-around;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .titulo{
-    margin-top: 20px;
-    text-align: center;
-    color: #000000;
-    font-size: 35px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    
+  margin-top: 20px;
+  text-align: center;
+  color: #000000;
+  font-size: 35px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
 
 .planos{
-    animation: vibrate 5s ease 0s infinite normal none;
-    margin-top: 20px;
-    text-align: center;
-    color: #366AB9;
-    font-size: 35px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
+  animation: vibrate 5s ease 0s infinite normal none;
+  margin-top: 20px;
+  text-align: center;
+  color: #366AB9;
+  font-size: 35px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
 
 .sessoes-servicos{
-    display: flex;
-    margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
 }
 
 .lado-esquerdo{
-    animation: showItens 2s ease 0s normal none;
-    display: flex;
-    text-align: center;
-    margin-left: 5%;
-    margin-top: auto;
-    margin-bottom: auto;
-    max-width: 50%;
-    height: auto;
-
+  animation: showItens 2s ease 0s normal none;
+  display: flex;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 50%;
+  height: auto;
 }
 
 .lado-direito{
-    animation: showItens 3s ease 0s normal none;
-    display: flex;
-    text-align: center;
-    margin-right: 5%;
-    max-width: 50%;
-    height: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+  animation: showItens 3s ease 0s normal none;
+  display: flex;
+  text-align: center;
+  margin-right: 5%;
+  max-width: 50%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .titulo-sessoes{
-    display: flex;
-    margin-inline: auto;
-    text-align: center;
-    font-weight: bold;
+  display: flex;
+  margin-inline: auto;
+  text-align: center;
+  font-weight: bold;
 }
 
 .text-sessoes{
-    display: flex;
-    font-size: x-large;
-    flex-direction: column;
+  display: flex;
+  text-align: justify;
+  font-size: x-large;
+  flex-direction: column;
 }
 
 .img-sessoes{
-    width: 100%;
-    height: auto;
-    margin-inline: auto;
+  width: 100%;
+  height: auto;
+  margin-inline: auto;
 }
 
 .ali-text{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 600px){
+
+  .titulo-sessoes{
+    font-size: 20px;
+  }
+
+  .text-sessoes{
+    font-size: 15px;
+  }
 
 .sessoes-servicos{
     display: flex;

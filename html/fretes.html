@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/fretes.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <script src="../js/funcoes.js"></script>
     <title>Fretes</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
         
         <div class="div-pesquisa">
             <input class="pesquisa" type="search" id="busca" name="busca">
-            <button class="btn-pesquisa" type="submit">Buscar</button>
+            <button onclick="redirect()" class="btn-pesquisa" type="submit">Buscar</button>
         </div>
         
         <a href="../html/login.php"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra">Login</p></div></a>    
@@ -49,10 +50,13 @@
     <div class="sessoes-servicos">
         <div class="lado-esquerdo text-1">
             <div class="ali-text">
-                <h1>Frete comum</h1><p class="text-sessoes">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Fugiat totam, sint non a sed dicta nesciunt odit, repellat,
-                    maxime debitis praesentium dignissimos error dolorem eum mollitia
-                    itaque adipisci quo animi.</p>
+                <h1>Frete comum</h1><p class="text-sessoes">O serviço de frete desempenha um papel crucial na 
+                    facilitação do comércio, proporcionando conveniência aos consumidores e permitindo que empresas 
+                    alcancem mercados distantes. Além da praticidade de receber produtos no conforto do lar, 
+                    a expansão geográfica viabilizada pelo transporte de mercadorias impulsiona o crescimento 
+                    econômico e fortalece os laços comerciais. A segurança nas operações de frete, com medidas 
+                    rigorosas para preservar a integridade das mercadorias, adiciona um elemento essencial de confiança, 
+                    essencial para a prosperidade do comércio moderno.</p>
             </div>
         </div>
 
@@ -63,15 +67,19 @@
 
     <div class="sessoes-servicos">
         <div class="lado-esquerdo img-2">
-            <img class="img-sessoes" src="../img/frete-comum.png" alt="">
+            <img class="img-sessoes" src="../img/frete-express.png" alt="">
         </div>
 
         <div class="lado-direito text-2">
             <div class="ali-text">
-                <h1>Frete Express</h1><p class="text-sessoes">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Fugiat totam, sint non a sed dicta nesciunt odit, repellat,
-                maxime debitis praesentium dignissimos error dolorem eum mollitia
-                itaque adipisci quo animi.</p>
+                <h1>Frete Express</h1><p class="text-sessoes">O serviço de frete express agrega ainda mais valor
+                    ao comércio, proporcionando uma entrega rápida e eficiente de produtos. 
+                    A agilidade no transporte não apenas atende às expectativas crescentes dos consumidores 
+                    por entregas rápidas, mas também possibilita uma resposta mais ágil às demandas do mercado. 
+                    Empresas que oferecem frete express destacam-se pela sua capacidade de atender prontamente às 
+                    necessidades dos clientes, contribuindo para uma experiência de compra mais satisfatória. 
+                    Essa modalidade de frete não apenas otimiza a logística, mas também desempenha um papel vital 
+                    na era do comércio eletrônico, onde a rapidez na entrega é muitas vezes um diferencial decisivo.</p>
             </div>
         </div>
     </div>

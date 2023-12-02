@@ -85,6 +85,7 @@
 
 .text-sessoes{
   display: flex;
+  text-align: justify;
   font-size: x-large;
   flex-direction: column;
 }
@@ -107,8 +108,12 @@
     flex-direction: column;
   }
 
+  .titulo-sessoes{
+    font-size: 20px;
+  }
+
   .text-sessoes{
-    font-size: small;
+    font-size: 15px;
   }
 
   .lado-direito{

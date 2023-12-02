@@ -39,7 +39,7 @@ $mysqli->close();
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <script src="../js/perfil.js"></script>
+    <script src="../js/funcoes.js"></script>
     <title>Cadastro</title>
 </head>
 <body>
@@ -51,10 +51,10 @@ $mysqli->close();
 
         <div class="div-pesquisa">
             <input class="pesquisa" type="search" id="busca" name="busca">
-            <button class="btn-pesquisa" type="submit">Buscar</button>
+            <button onclick="redirect()" class="btn-pesquisa" type="submit">Buscar</button>
         </div>
         
-        <a href="../html/login.php"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra" id="login_palavra"></p></div></a>
+        <a href="../html/login.php"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra" id="login_palavra">Login</p></div></a>
     </header>
 
     <div class="menu">
@@ -96,17 +96,5 @@ $mysqli->close();
 
         </form>
     </div>
-
-    
-    <a href="../index.php"><footer>
-        <div class="logofoot">
-            <img class="logo-img-footer" src="../img/logo-preta.png" alt="">
-            <p class="nome-empresa-footer">Mão na Roda</p>
-        </div>
-
-        <p class="cop">©2023 - 2030 - Mão na Roda</p>
-        <p class="cnpj">Serviços da Mão na Roda Brasil - CNPJ 24.123.123/01.123.561</p>
-    </footer></a>
-
 </body>
 </html>

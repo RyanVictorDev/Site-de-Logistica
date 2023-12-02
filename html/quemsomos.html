@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/rastreamento.css">
+    <link rel="stylesheet" href="../css/quemsomos.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <title>Rastreamento</title>
+    <script src="../js/funcoes.js"></script>
+    <title>Quem somos</title>
 </head>
 <body>
 
@@ -14,12 +15,12 @@
         <a href="../index.php"><div class="logo">
         <img class="logo-img" src="../img/logo.png" alt=""> 
         </div></a>
-        
+
         <div class="div-pesquisa">
             <input class="pesquisa" type="search" id="busca" name="busca">
-            <button class="btn-pesquisa" type="submit">Buscar</button>
+            <button onclick="redirect()" class="btn-pesquisa" type="submit">Buscar</button>
         </div>
-
+        
         <a href="../html/login.php"> <div class="login-link"><img class="login" src="../img/user.png" alt=""><p class="login-palavra">Login</p></div></a>    </header>
 
     <div class="menu">
@@ -32,36 +33,27 @@
         </div></a>
 
         <a href="../html/rastreamento.php"><div class="itens-menu">
-            <img src="../img/lupa.png" alt="" class="lupa"> <p class="link pag-atual">Rastreamento</p>
+            <img src="../img/lupa.png" alt="" class="lupa"> <p class="link">Rastreamento</p>
         </div></a> 
 
         <a href="../html/quemsomos.php"><div class="itens-menu">
-            <img src="../img/pessoa.png" alt="" class="pessoa"> <p class="link">Quem somos</p>
+            <img src="../img/pessoa.png" alt="" class="pessoa"> <p class="link pag-atual">Quem somos</p>
         </div></a>
     </div>
 
-    <!-- <p class="titulo-pag">Rastreamento de encomendas</p> -->
-    
-    <div class="raster-box">
-        <h2 class="titulo">Quer encontrar seu pedido?</h2>
-        <br>
-        <form action="" method="post">
-            <div>
-                <label class="label-nome" for="nome-produto">Nome</label>
-                <input type="text" id="nome-produto" name="nome-produto" placeholder="Adicione o nome do produto:" required>
+    <img class="quemsomos_banner" src="../img/quemsomos-banner.png" alt="">
 
-                <label class="label-cod" for="codigo">Código</label>
-                <input type="text" id="codigo" name="codigo" placeholder="Adicione o código do produto:" required>
-            </div>
+    <p class="titu">O que é Logistica</p>
 
-            <input class="rastrear-pedido" type="submit" value="Rastrear pedido">
+    <div class="desc">A logística é uma área fundamental que envolve o planejamento, execução e 
+        gerenciamento eficiente de todas as etapas do fluxo de produtos, desde a origem até o destino, com o 
+        objetivo de atender às necessidades dos clientes da maneira mais eficaz e econômica possível. </div>
 
-        </form>
-    </div>
-
-<!--<label class="label-local" for="localizacao">Localização</label>
-    <textarea name="localizacao" id="localizacao" placeholder="Seu produto está em:"></textarea> -->
-
+    <p class="titu">Quem é Mão na Roda</p>
+    <div class="desc">É uma empresa de logística inovadora, dedicada a oferecer soluções de transporte e 
+        gerenciamento de cadeia de suprimentos excepcionais para empresas de todos os tamanhos e setores. 
+        Fundada com a visão de simplificar e otimizar o fluxo de mercadorias em escala global, somos apaixonados 
+        por enfrentar desafios logísticos complexos e transformá-los em oportunidades de sucesso para nossos clientes.</div>
 
     <a href="../index.php"><footer>
         <div class="logofoot">
